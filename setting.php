@@ -1,19 +1,4 @@
 <?php
-$align = $_COOKIE['text_align'];
-$font = $_COOKIE['font_family'];
-$color = $_COOKIE['font_color'];
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    setcookie('text_align', $_POST['text_align']);
-    setcookie('font_family', $_POST['font_family']);
-    setcookie('font_color', $_POST['font_color']);
-    header('Location:hasil.php');
-    exit();
-}
-
-$fontOptions = ['Arial', 'Verdana', 'Tahoma', 'Trebuchet', 'Times New Roman', 'Georgia', 'Garamond', 'Calibri', 'Courier New'];
-$alignOptions = ['Left','Center','Right','Justify'];
-
 if (isset($_COOKIE['text_align'])) {
     $align = $_COOKIE['text_align'];
 } else {
@@ -32,6 +17,16 @@ if (isset($_COOKIE['font_color'])) {
     $color = '#000000';
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    setcookie('text_align', $_POST['text_align']);
+    setcookie('font_family', $_POST['font_family']);
+    setcookie('font_color', $_POST['font_color']);
+    header('Location:hasil.php');
+    exit();
+}
+
+$fontOptions = ['Arial', 'Verdana', 'Tahoma', 'Trebuchet', 'Times New Roman', 'Georgia', 'Garamond', 'Calibri', 'Courier New'];
+$alignOptions = ['Left','Center','Right','Justify'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
