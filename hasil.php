@@ -25,20 +25,25 @@ $css = "p { text-align: $align; font-family: $font; color: $color; }";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Hasil</title>
     <style>
         <?php echo $css; ?>
     </style>
 </head>
 <body>
-    <h1>Halaman Hasil</h1>
-    <textarea rows="6" cols="60" readonly><?php echo $css; ?></textarea>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <br>
-    <form action="setting.php" method="get">
-        <button type="submit">Ganti Setting</button>
-    </form>
+    <div class = "container">
+        <h1>Hasil</h1>
+        <h4> Setting yang tersedia:</h4>
+        <textarea rows="6" cols="60" readonly><?php echo $css; ?></textarea>
+        <h4>Contoh paragraf:</h4>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <br>
+        <form action="setting.php" method="get">
+            <button type="submit">Ganti Setting</button>
+        </form>
+    </div>
 </body>
 </html>
